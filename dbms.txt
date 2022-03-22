@@ -1,0 +1,116 @@
+DATABESE MANAGEMENT SYSTEM---->
+user command--->>which user we gonna use
+by default is root user
+command-->first we have to go to bin file of sql server-->then
+we have to copy the bin location
+-->we have to change our directory to the specified bin in commmand prompt
+-->after that we have to write command -->
+-->mysql -u root -p
+--->we have to type the password-->Alamfaiz@99
+-->show databases;-->statement termination
+(it will show the databases) 
+-->create database faizan
+(it will create database named faizan)
+-->select database() from dual
+(it will show the current database in which you are working)
+--->status;
+(it will show in which database you are currently working in)
+--->drop database name;
+(it will delete the desired database)
+--->use databasename;
+(it will use a particular database)
+--->create table tablename(attributes/propertirs);
+(it will create table and we have to add attributes as well)
+--->desc student;
+(it will give the desc of the tables means having all kind of desc of the table 
+you ahve provided)
+--->insert into table_name(attributes/fields data)values(enter data);
+(in this way you can insert the values in the tables)
+---->select * from table_name;
+(you can see the actul content of the table)
+---->insert into table values (),(),();
+(in this way you can insert multiple values)
+-->insert into table_name(attributes/fields)values(data);
+(in this way you can add values in the specified column)
+--->alter table table_name
+    add column_name defination-->datatype ,NOT NULL
+      AFTER Field_name
+(in this way you can add new fields in mysql)
+-->delete from table_name where fieldname=
+(in this way you can delete a particular row in my sql)
+-->update student set contact=87923739 where name='fazian';
+(in this way you can update a particular row in a table) 
+--->alter table table_name add primary key(field name);
+(in this way you acn set any field as primary key)
+--->alter table student drop primary key;
+(in this way you can remove the primary key)
+
+--->lets talk about unique keys
+a UNIQUE index ensures that the value in the column must be unique
+unlike primary key,it allows NULL values to the indices
+a table can have multiple UNIQUE keys
+it doesnolt ahve duplicate entries
+---:>how to delete a particular field in a database table
+-->command->(alter table table_name drop column_name;)
+-->ater table student add phone desc after field name
+--->if you wanna change the name of field then(change)
+alter table student
+change column old_name new_name
+col_defination;
+--->how to rename the table
+alter table student
+rename to new_table_name;
+--->how to delete the table fromn mysql
+drop table table_name;
+drop multiple tables
+drop table t1,t2,t3...;
+13-03-2022--->
+to select a aprticular thing in a table to view
+(select * from student where roll=1;)
+--->
+setting up a mysql user account
+--->we have mysql as database
+-->
+show tables;
+-->user-->table
+encrypted data are available
+insert into user
+(host,user,password,Select_priv,Insert_priv,Update_priv)
+values('local host','guest',PASSWORD('guest123'),'Y','Y','Y');
+-->flush privilages; 
+-->in order to see the columns of your table you can use
+(show columns from table_name;)
+
+-->how to create index on the table
+create index [index name] on [table name]([column name])
+index name -->name of index
+table name-->name of table
+column name-->name of column
+
+create index auto_id on newauthor(aut_id);
+the above sql command will create an INDEX,you can crteate an unique index on mysql
+indexes are used to find rows with specificcolumn values quickly
+-->how to see index on a table
+show index from table_name from d-name;
+show index from d-name.taable-name;
+ -->WHAT IS CLAUSE?
+WHERE IS A CLAUSE IN MYSQL
+CAN BE COMBINE DWITH AND OR NOT
+
+SELECT COL1,COL2 FROM TABLE_NAME WHERE CON1 AND OND 2 AND CON3;
+SELECT COL1,COL2,COL3 FRON TBLE_NAME WHERE CON1 OR CON2 OR CON3;
+SELECT COL1,COL2 FROM TABKLE_NAME WHERE NOT CON1;
+
+-->SQL ORDER BY KEYWORD
+THE ORDER BY KEYWORD IS USED TO SET THE RESULT IN ASCENDING/DESCENDING OREDR
+BY DEFAULT-->ASCENDING ORDER
+TO SORT THE RECORDS IN DECENDING ORDER ,
+USE THE DESC KEYWORD
+
+SELECT COL1,COL2,... 
+FROM TABLE_NAME
+OREDR BY COL1,COL2,..
+ASC|DESC;
+
+SELECT * FROM CUSTOMERS
+ORDER BY COUNTRY;
